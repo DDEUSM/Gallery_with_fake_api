@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -9,7 +10,6 @@ header {
     justify-content: center;
     height: 120px;    
     background-color: rgb(52, 110, 225);
-    font-family: Arial, Helvetica, sans-serif;
     padding-left: 20px;    
 }
 
@@ -41,12 +41,34 @@ header {
     flex: 1 1 100%;
     height: 100px;
     color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
     font-weight: 600;
     background-color: grey;
     border: 1px solid rgb(52, 110, 225);     
 }
 
+.router-sequence {
+    display: flex;
+    flex: 1 1 100%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(28, 74, 201);
+    color: #ffff;
+}
+
+.router-link {
+    padding: 10px;
+    color: #fff;
+}
+
+.photos-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(194, 194, 194);
+    gap: 20px;
+    padding: 20px;
+}
 
 

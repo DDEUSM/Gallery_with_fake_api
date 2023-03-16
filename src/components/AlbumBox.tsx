@@ -1,12 +1,13 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useReducer } from 'react'
+import { useReducer, useEffect } from 'react'
 import req from './Requests'
 
 type Props = {
-    albumName : string
+    
+    setPage : (linkItem : JSX.Element) => void    
 }
 
-type ReducerState = {
+export type ReducerState = {
     userId : number,
     id : number,
     title : string
@@ -27,7 +28,7 @@ const reducer = (state : ReducerState[], action : ReducerAction) => {
     return state
 }
 
-const AlbumBox = ({ albumName } : Props) => {  
+const AlbumBox = ({ setPage } : Props) => {  
     
     const navigate = useNavigate()
 
@@ -36,6 +37,10 @@ const AlbumBox = ({ albumName } : Props) => {
     const clickTo = (id : number) => {
 
     }   
+
+    useEffect(() => {
+        setPage(<Link id="Home" className='router-link' to="/">Home</Link>)
+    },[])
 
     return (        
         <>

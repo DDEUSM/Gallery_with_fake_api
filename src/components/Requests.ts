@@ -9,8 +9,17 @@ export default {
         const response = await http.get("/albums")
         return response.data
     },
-    getAllImages : async() => {
-        const response = await http.get("/photos")
+    getOneAlbum : async(id : string) => {
+        const response = await http.get(`/albums/${id}`)
+        return response.data
+    },
+    getImagesOfAlbum : async(id : string) => {
+        const response = await http.get(`/photos?albumId=${id}`)
+        return response.data
+    },
+    getOneImage : async(id : string) => {
+        const response = await http.get(`/photos/${id}`)
         return response.data
     }
+    
 }
